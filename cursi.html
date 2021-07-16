@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> novia </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script>
+        function accionparaquecuandoelladigaquesi() {
+            alert("Sabia que me querias <3 , cuando nos vemos? ")
+        }
+
+        function mueveElBoton() {
+            width = window.innerWidth;
+            heigth = window.innerHeigth;
+
+            newWidth = (Math.random() * width);
+            newHeigth = (Math.random() * heigth);
+
+            document.getElementById('btnNo').style.position = "absolute";
+            document.getElementById('btnNo').style.left = newWidth + "px";
+            document.getElementById('btnNo').style.top = newHeigth + "px";
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1> ¿Quieres ser mi novia? </h1>
+    <input type="button" onclick="accionparaquecuandoelladigaquesi()" id="btnSi" value="SI" />
+    <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
+</body>
+
+</html>
